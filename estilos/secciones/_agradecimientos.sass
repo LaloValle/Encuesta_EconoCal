@@ -1,0 +1,141 @@
+.contenedor
+    width: 100vw
+    min-height: 100%
+    height: max-content
+
+    color: color(blanco)
+    @include gradiente_fondo
+    font-family: 'Nunito', 'Montserrat', sans-serif
+
+    display: flex
+    align-items: center
+    justify-content: center
+
+.centrar
+    padding: 15px
+    width: 100vw
+
+    @include resoluciones_grandes
+        padding: 45px
+        max-width: 1200px
+
+.encabezado
+    display: grid
+    grid-template-areas: 'titulo' 'imagen' 'informacion'
+    grid-template-columns: 100%
+    grid-template-rows: max-content minmax(250px,max-content)
+
+    @include resoluciones_grandes
+        grid-template-areas: 'titulo titulo' 'imagen informacion'
+        grid-template-columns: 70% 30%
+        grid-template-rows: max-content minmax(350px,max-content)
+
+    &__titulo
+        grid-area: titulo
+        
+        width: 100%
+
+        color: color(rojo)
+
+        text:
+            align: center
+            transform: uppercase
+        letter-spacing: 5px
+
+        @include fuente_titulos
+
+    &__imagen
+        grid-area: imagen
+
+        width: 100%
+        max-height: 100%
+
+        padding: 15px
+
+        object-fit: contain
+
+    &__informacion
+        grid-area: informacion
+
+        display: flex
+        flex-direction: column
+        justify-content: space-evenly
+
+        width: 70%
+        margin: auto
+        height: 60%
+        min-height: 200px
+
+        @include resoluciones_grandes
+            width: 100%
+            margin: none
+
+        & > *
+            margin: 5px 0px
+
+        &__titulo
+            @include fuente_titulos
+
+            font-size: 1.2rem
+            color: color(vanilla)
+            font-weight: normal
+            text-transform: none
+
+        &__mensaje
+            font-size: 0.8rem
+
+            @include justificar
+
+.contacto
+    width: 100%
+
+    & > *
+        padding: 1.2rem
+        font-size: 0.9rem
+
+    &__titulo
+
+        @include fuente_titulos
+        text-transform: none
+
+        background: color(azul_gris)
+        border-radius: 10px 10px 0px 0px
+
+    &__informacion
+        background: color(vanilla)
+
+        border-radius: 0px 0px 10px 10px
+
+        display: grid
+        grid-template-areas: 'mensaje' 'input' 'boton'
+        grid-template-columns: 100%
+
+        @include resoluciones_grandes
+            grid-template-areas: 'mensaje mensaje' 'input boton'
+            grid-template-columns: 80% 20%
+
+        align-items: center
+        justify-content: center
+
+        & > *
+            margin: 0.5rem 0px
+
+        &__mensaje
+            grid-area: mensaje
+            color: color(fondo_obscuro)
+
+        &__input
+            grid-area: input
+
+            & > *
+                color: color(fondo_obscuro)
+
+        &__boton
+            grid-area: boton
+            width: max-content
+            justify-self: center
+
+.pie-pagina
+    margin: 10px 0px
+    text-align: center
+    font-size: 0.8rem

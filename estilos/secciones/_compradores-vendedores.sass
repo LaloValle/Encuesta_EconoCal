@@ -1,0 +1,121 @@
+.contenedor
+    width: 100vw
+    min-height: 100%
+    height: max-content
+
+    color: color(blanco)
+    @include gradiente_fondo
+    font-family: 'Nunito', 'Montserrat', sans-serif
+
+    display: flex
+    align-items: center
+    justify-content: center
+
+.centrar
+    padding: 15px
+    width: 100vw
+
+    @include resoluciones_grandes
+        padding: 45px
+        max-width: 1200px
+
+.encabezado
+    display: flex
+    flex-direction: column-reverse
+
+    @include resoluciones_grandes
+        flex-direction: row
+
+    &__informacion
+        width: 100%
+        padding: 0px 15px
+        min-height: 250px 
+
+        display: flex
+        flex-direction: column
+        justify-content: space-evenly
+
+    &__subtitulo
+        color: color(rojo)
+        letter-spacing: 18%
+        font-size: 1.2rem
+
+    &__titulo
+        font-size: 1.5rem
+
+    &__parrafo
+        @include justificar
+
+    &__contenedor-imagen
+        width: 100%
+
+    &__imagen
+        margin: auto
+        display: block
+        
+        max-width: 120px
+        width: 50%
+
+        @include resoluciones_grandes
+            max-width: 200px
+
+.seccion__encuestas
+    width: 100%
+
+    display: flex
+    align-items: center
+    justify-content: space-evenly
+    flex-direction: column-reverse
+    grid-row-gap: 1.5rem
+
+    @include resoluciones_grandes
+        flex-direction: row
+        margin: 4rem 0px 
+    
+    &__visitar
+        width: 100%
+
+        justify-items: center
+        align-items: center
+
+        display: grid
+        grid-row: 3
+        grid-column: 1
+        grid-template-areas: 'titulo' 'parrafo' 'accion'
+
+        @include resoluciones_grandes
+            grid-template-areas: 'titulo titulo' 'parrafo accion'
+            grid-column-gap: clamp(20px,5vw,6rem)
+
+        & > *
+            margin: 5px
+
+        &__titulo
+            grid-area: titulo
+
+            padding-bottom: 1.5rem
+
+        &__parrafo
+            grid-area: parrafo
+            font-size: 0.9rem
+
+            @include justificar
+
+        &__boton
+            grid-area: accion
+            font-size: 0.8rem
+
+    &__separador
+        width: 100%
+
+        @include resoluciones_grandes
+            width: 250px
+            transform: rotate(90deg)
+
+    &__iniciar__boton
+        background: gradient
+
+.pie-pagina
+    margin: 15px 0px
+    text-align: center
+    font-size: 0.8rem

@@ -1,0 +1,189 @@
+@import 'sombras_gradientes'
+
+.boton
+    display: inline-block
+    padding: 0.8rem 2rem
+
+    border: none
+    border-radius: 50px
+    background: color(rojo)
+
+    font-weight: bold
+    color: color(blanco)
+
+    cursor: pointer
+
+    @include sombra_elemento
+
+    &--redondo
+        width: 7rem
+        height: 7rem
+
+        max-width: 100px
+        max-height: 100px
+
+        font-size: 1.2rem
+
+        display: flex
+        align-items: center
+        justify-content: center
+
+        padding: 0
+
+        border-radius: 50%
+
+    &--aurora-verde
+        background: gradiente(color(verde),color(verde_obscuro))
+
+    &--aurora-morado
+        background: gradiente(color(morado),color(rojo))
+
+    &--aurora-gris
+        background: gradiente(color(azul_gris_claro),color(azul_gris))
+
+.tarjeta
+    background: color(azul_gris)
+
+    transition: background 300ms
+
+    width: 200px
+    min-height: 200px
+    height: max-content
+    
+    border: none
+    border-radius: 10px
+
+    @include resoluciones_pequeñas
+        width: 180px
+        min-height: 180px
+
+    @include resoluciones_grandes
+        width: 250px
+        min-height: 250px
+
+    & > *
+        padding: 0.5rem
+
+    &__imagen
+        width: 100%
+        height: 160px
+        
+        border-radius: 10px 10px 0px 0px
+
+        background: color(azul_gris_claro)
+        
+        object-fit: contain
+
+        @include resoluciones_pequeñas
+            height: 153px
+
+        @include resoluciones_grandes
+            height: 200px
+
+        &__icono
+            width: 100%
+            height: 100%
+
+            transition: stroke 300ms
+
+            stroke: color(azul_gris)
+
+    &__descripcion
+        width: 100%
+
+        padding: 10px
+
+        //Modificadores
+        &--centrar
+            text-align: center
+
+        &--fondo
+            background: color(azul_gris)
+            border-radius: 0px 0px 10px 10px
+
+    //Modificadores
+    &--pequeña
+        width: 100px
+        min-height: 100px
+
+        @include resoluciones_pequeñas
+            width: 80px
+            min-height: 80px
+
+        @include resoluciones_grandes
+            min-width: 120px
+            min-height: 120px
+
+        & .tarjeta__imagen
+            height: 80px
+
+            @include resoluciones_pequeñas
+                height: 68px
+
+            @include resoluciones_grandes
+                height: 96px
+
+        &--alargada
+            width: 180px
+
+            @include resoluciones_pequeñas
+                width: 150px
+
+            @include resoluciones_grandes
+                min-width: 200px
+
+    &--alargada
+        width: 320px
+
+        @include resoluciones_pequeñas
+            width: 200px
+
+        @include resoluciones_grandes
+            width: 350px
+
+    &--sin-fondo
+        background: none
+
+        & .tarjeta__imagen
+            background: none
+    
+    &--apuntador
+        cursor: pointer
+
+.input
+    display: flex
+    justify-content: space-evenly
+
+    &__label--bold
+        font-weight: bold
+        font-size: 1.1rem
+
+    &__input
+        padding: 0.5rem
+
+        flex-grow: 1
+
+        background: none
+
+        border: 1px solid color(gris_claro)
+            radius: 10px
+
+        //Modificadores
+        &--textarea
+            width: 100%
+            height: 80%
+            min-height: 200px
+
+            flex-grow: 1
+
+            margin-top: 1.5rem
+
+    & > *
+        margin: 1rem
+
+    //Modificadores
+    &--filas
+        flex-direction: column
+
+        & > *
+            margin: 0px

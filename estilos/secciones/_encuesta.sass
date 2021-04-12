@@ -1,0 +1,199 @@
+.lienzo
+    max-width: 100vw
+    min-height: 100vh
+    height: max-content
+
+    padding: 1rem
+
+    display: flex
+    align-items: center
+    flex-direction: column
+    justify-content: center
+
+    @include gradiente_fondo
+
+.paginas
+    width: 100%
+    height: max-content
+
+    position: relative
+
+    overflow: hidden
+
+    @include resoluciones_grandes
+        max-width: 1200px
+
+.botones-paginas
+    display: flex
+
+    width: 100%
+
+    @include resoluciones_grandes
+        max-width: 1200px
+
+    &__avanzar
+        margin-left: auto
+
+.pagina
+    width: 100%
+
+    flex-grow: 1
+
+    overflow: hidden
+
+    top: 0px
+    left: 0px
+    position: absolute
+
+    display: grid
+    grid-template-columns: repeat(auto-fit,minmax(401px,1fr))
+
+    transition: transform 300ms
+
+    @include resoluciones_pequeñas
+        display: block
+
+.pregunta
+    min-height: calc(50vh - 4rem)
+
+    padding: 15px 0px
+
+    display: flex
+    flex-direction: column
+
+    &__titulo
+        padding: 0.5rem
+
+        font-size: 1.2rem
+
+        text-transform: none
+
+        color: color(blanco)
+
+        @include justificar
+
+    &__opciones
+        width: 100%
+
+        flex-grow: 1
+
+        display: flex
+        flex-direction: row
+        flex-wrap: wrap
+        align-items: center
+        justify-content: center
+
+        //Modificadores
+        &--filas
+            flex-direction: column
+
+            & [class$=opcion]
+                width: 90%
+
+                & > *
+                    width: 100%
+
+        &--espaciados
+            justify-content: space-evenly
+
+            & > *
+                margin: 5px
+
+        &--cuadricula
+            margin-top: 2rem
+
+            display: grid
+            grid-template-columns: repeat(auto-fit,minmax(350px,1fr))
+
+            flex-grow: 0
+
+            align-items: normal
+            justify-content: normal
+
+            & li label span
+                height: 100%
+
+                display: flex
+                align-content: center
+
+                border: 1px solid color(fondo_obscuro)
+        
+        &--logotipo
+            display: grid
+            grid-template-areas: 'logotipo neutral' 'logotipo acuerdo'
+
+            & li:first-child
+                grid-area: logotipo
+
+                max-width: 200px
+                
+                display: flex
+                align-items: center
+
+                @include resoluciones_grandes
+                    max-width: 300px
+
+                & img
+                    width: 100%
+                    max-height: 200px
+
+                    object-fit: contain
+                    object-position: center
+
+                    @include resoluciones_grandes
+                        max-height: 300px
+
+            & li:nth-child(2)
+                grid-area: neutral
+
+            & li:last-child
+                grid-area: acuerdo
+                
+
+
+
+    //Modificadores
+    &--ancho-columnas
+        grid-column: 1 / -1
+
+    &--alto-filas
+        grid-row: 1 / -1
+
+        min-height: calc(100vh - 8rem)
+
+.opcion
+    &__radio
+        position: absolute
+        opacity: 0
+
+        &:checked + .caras
+            background: none
+
+        &:checked + *
+            background: color(verde)
+
+        &:checked + div > div > .tarjeta__imagen__icono[desacuerdo]
+            stroke: color(azul)
+
+        &:checked + div > div > .tarjeta__imagen__icono[neutral]
+            stroke: color(naranja)
+
+        &:checked + div > div > .tarjeta__imagen__icono[acuerdo]
+            stroke: color(verde)
+
+        &__valor
+            width: 100%
+            display: block
+            cursor: pointer
+            padding: 1.2rem
+            margin-top: 2px
+            transition: background 300ms
+            background: color(azul_gris)
+
+    &__valor-range
+        display: block
+        font:
+            size: 1.5rem
+            weight: bold
+        text-align: center
+        margin-top: 1.5rem

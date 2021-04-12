@@ -1,0 +1,124 @@
+.contenedor
+    width: 100vw
+    min-height: 100%
+    height: max-content
+
+    color: color(blanco)
+    @include gradiente_fondo
+    font-family: 'Nunito', 'Montserrat', sans-serif
+
+    display: flex
+    align-items: center
+    justify-content: center
+
+.centrar
+    padding: 15px
+    width: 100vw
+
+    @include resoluciones_grandes
+        padding: 45px
+        max-width: 1200px
+
+.encabezado
+    display: flex
+    flex-direction: column-reverse
+
+    @include resoluciones_grandes
+        flex-direction: row
+
+    &__informacion
+        width: 100%
+        padding: 0px 15px
+        min-height: 250px 
+
+        display: flex
+        flex-direction: column
+        justify-content: space-evenly
+
+    &__subtitulo
+        color: color(rojo)
+        letter-spacing: 18%
+        font-size: 1.2rem
+
+    &__titulo
+        font-size: 1.5rem
+
+    &__parrafo
+        @include justificar
+
+    &__contenedor-imagen
+        width: 100%
+
+    &__imagen
+        margin: auto
+        display: block
+        
+        max-width: 280px
+        width: 100%
+
+        @include resoluciones_grandes
+            max-width: 420px
+
+.seccion__encuestas
+    width: 100%
+
+    display: flex
+    align-items: center
+    flex-direction: column-reverse
+    grid-row-gap: 1rem
+
+    @include resoluciones_grandes
+        flex-direction: row
+        margin: 4rem 0px 
+    
+    &__visitar
+        width: 80%
+
+        justify-items: center
+        align-items: center
+
+        display: flex
+        flex-direction: column
+
+        & > *
+            margin: 5px
+
+        &__titulo
+            padding-bottom: 1.5rem
+
+        &__parrafo
+            font-size: 0.9rem
+
+            @include justificar
+
+        &__boton
+            font-size: 0.8rem
+
+    &__separador
+        width: 100%
+
+        @include resoluciones_grandes
+            width: 150px
+            transform: rotate(90deg)
+
+    &__iniciar
+        max-width: 100vw
+        height: 100%
+
+        display: flex
+        justify-content: space-evenly
+        align-items: center
+
+        &__descripcion
+            width: 70%
+            max-width: 450px
+            font-size: 0.8rem
+
+        &__boton
+        background: gradient
+        width: max-content
+
+.pie-pagina
+    margin: 15px 0px
+    text-align: center
+    font-size: 0.8rem

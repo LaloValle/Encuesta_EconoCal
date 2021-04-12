@@ -1,0 +1,19 @@
+$colores : ( fondo_obscuro : #102a43,
+fondo_claro : #334E68,
+
+rojo : #E43F5A,
+azul : #1687A7,
+verde : #29BB89,
+morado : #7045AF,
+vanilla : #e7cc8f,
+naranja : #F48B29,
+verde_obscuro: #00917C,
+
+blanco : #F5F7FA,
+gris : #A8A8A8,
+
+azul_gris : #627D98,
+azul_gris_claro : #9FB3C8)
+
+@function color($nombre)
+    @return map_get($colores,$nombre)

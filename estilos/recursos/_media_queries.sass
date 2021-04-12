@@ -1,0 +1,15 @@
+//Variables de las resoluciones máximas para cada dispositivo
+$celular : 800
+
+@mixin resoluciones_pequeñas
+    @media screen and (max-width: 400px)
+        @content
+
+@mixin celular
+    @media screen and (min-width:401px) and (max-width: #{$celular}px)
+        @content
+
+// Resoluciones de tabletas, escritorio y pantallas wide
+@mixin resoluciones_grandes
+    @media screen and (min-width: #{$celular+1}px)  
+        @content

@@ -1,0 +1,24 @@
+// Nunito
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400&display=swap')
+// Montserrat
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Nunito:ital,wght@0,400;0,700;1,400&display=swap')
+
+@mixin fuente_titulos
+    font-family: 'Montserrat', 'Nunito', sans-serif
+    
+@mixin justificar
+    text-align: justify
+    text-justify: inter-word
+
+//Se asigna el valor de rem a cada resolucion
+@include resoluciones_pequeñas
+    #{':root'}
+        font-size: 10px
+
+@include celular
+    #{':root'} 
+        font-size: clamp(11px, 1.8vw, 15px)
+
+@include resoluciones_grandes
+    #{':root'} 
+        font-size: clamp(15px, 1.3vw, 18px)

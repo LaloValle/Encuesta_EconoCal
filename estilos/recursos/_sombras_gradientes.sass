@@ -1,0 +1,13 @@
+// Gradientes
+@function gradiente($color1,$color2,$direccion:to right)
+    @return linear-gradient($direccion,$color1,$color2)
+
+@mixin gradiente_fondo
+    background-image: gradiente(color(fondo_obscuro),color(fondo_claro),to top)
+
+// Sombras
+@mixin sombra_elemento
+    box-shadow: 0px 10px 15px 2px #0000
+
+@mixin sombra_imagen
+    filter: drop-shadow(0px 15px 15px 2px #0000)

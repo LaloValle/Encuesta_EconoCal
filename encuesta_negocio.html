@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="estilos/encuestas.css">
+
+    <title>Encuestas</title>
+</head>
+<body>
+
+    <div class="lienzo">
+
+        <div class="paginas">
+            
+            <div class="pagina">
+
+                <div class="pregunta">
+                    <h3 class="pregunta__titulo">1.  Indique el nombre y tipo de negocio que maneja, en caso de no contar aún con nombre es suficiente con el tipo de negocio</h3>
+                    <ul class="pregunta__opciones pregunta__opciones--filas pregunta__opciones--espaciados">
+                        <li class="pregunta__opciones__opcion">
+                            <div class="input input--filas">
+                                <label for="nombre_negocio" class="input__label">Nombre del negocio</label>
+                                <input class="input__input" type="text" name="nombre_negocio" id="">
+                            </div>
+                        </li>
+                        <li class="pregunta__opciones__opcion">
+                            <div class="input input--filas">
+                                <label for="tipo_negocio" class="input__label">Tipo de negocio</label>
+                                <input class="input__input" type="text" name="tipo_negocio" id="">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pregunta">
+                    <h3 class="pregunta__titulo">2.  ¿Se ubica el negocio en la zona conurbada de México?</h3>
+                    <ul class="pregunta__opciones pregunta__opciones--filas">
+                        <li class="pregunta__opciones__opcion">
+                            <label>
+                                <input type="radio" class="opcion__radio" name="residencia" value="CDMX">
+                                <span class="opcion__radio__valor" >Sí, en la Ciudad de México</span>
+                            </label>
+                        </li>
+                        <li class="pregunta__opciones__opcion">
+                            <label>
+                                <input type="radio" class="opcion__radio" name="residencia" value="EdoMex">
+                                <span class="opcion__radio__valor" >Sí, en el Estado de México</span>
+                            </label>
+                        </li>
+                        <li class="pregunta__opciones__opcion">
+                            <label>
+                                <input type="radio" class="opcion__radio" name="residencia" value="Estados">
+                                <span class="opcion__radio__valor" >No, vivo en otro estado de la república</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pregunta pregunta--ancho-columnas">
+                    <h3 class="pregunta__titulo">3.  ¿Usted como dueño cuenta con teléfono móvil inteligente o Smartphone? </h3>
+                    <ul class="pregunta__opciones pregunta__opciones--espaciados">
+                        <li class="pregunta__opciones__opcion">
+                            <label>
+                                <input type="radio" class="opcion__radio" name="smartphone" value="Smartphone">
+                                <div class="tarjeta tarjeta--apuntador">
+                                    <img src="recursos/smartphone.png" class="tarjeta__imagen">
+                                    <p class="tarjeta__descripcion">Si cuento con teléfono inteligente</p>
+                                </div>
+                            </label>
+                        </li>
+                        <li class="pregunta__opciones__opcion">
+                            <label>
+                                <input type="radio" class="opcion__radio" name="smartphone" value="Sin_Smartphone">
+                                <div class="tarjeta tarjeta--apuntador">
+                                    <img src="recursos/telefono.png" class="tarjeta__imagen">
+                                    <p class="tarjeta__descripcion">No cuento con teléfono inteligente</p>
+                                </div>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="pagina">
+
+                <div class="pregunta">
+                    <h3 class="pregunta__titulo">4.  ¿Con qué sistema operativo funciona su teléfono?</h3>
+                    <ul class="pregunta__opciones pregunta__opciones--espaciados">
+                        <li class="pregunta__opciones__opcion">
+                            <label>
+                                <input type="radio" class="opcion__radio" name="SO" value="Android">
+                                <div class="tarjeta tarjeta--pequeña tarjeta--sin-fondo tarjeta--apuntador">
+                                    <img src="recursos/android.png" class="tarjeta__imagen">
+                                    <p class="tarjeta__descripcion tarjeta__descripcion--centrar tarjeta__descripcion--fondo">Android</p>
+                                </div>
+                            </label>
+                        </li>
+                        <li class="pregunta__opciones__opcion">
+                            <label>
+                                <input type="radio" class="opcion__radio" name="SO" value="iOS">
+                                <div class="tarjeta tarjeta--pequeña tarjeta--sin-fondo tarjeta--apuntador">
+                                    <img src="recursos/ios.png" class="tarjeta__imagen">
+                                    <p class="tarjeta__descripcion tarjeta__descripcion--centrar tarjeta__descripcion--fondo">iOS <br> (Apple)</p>
+                                </div>
+                            </label>
+                        </li>
+                        <li class="pregunta__opciones__opcion">
+                            <label>
+                                <input type="radio" class="opcion__radio" name="SO" value="Harmony_OS">
+                                <div class="tarjeta tarjeta--pequeña tarjeta--sin-fondo tarjeta--apuntador">
+                                    <img src="recursos/huawei.png" class="tarjeta__imagen">
+                                    <p class="tarjeta__descripcion tarjeta__descripcion--centrar tarjeta__descripcion--fondo">Harmony OS<br>(Huawei)</p>
+                                </div>
+                            </label>
+                        </li>
+                        <li class="pregunta__opciones__opcion">
+                            <label>
+                                <input type="radio" class="opcion__radio" name="SO" value="Windows_phone">
+                                <div class="tarjeta tarjeta--pequeña tarjeta--sin-fondo tarjeta--apuntador">
+                                    <img src="recursos/windows-phone.png" class="tarjeta__imagen">
+                                    <p class="tarjeta__descripcion tarjeta__descripcion--centrar tarjeta__descripcion--fondo">Windows Phone</p>
+                                </div>
+                            </label>
+                        </li>
+                        <li class="pregunta__opciones__opcion">
+                            <label>
+                                <input type="radio" class="opcion__radio" name="SO" value="No_se">
+                                <div class="tarjeta tarjeta--pequeña tarjeta--sin-fondo tarjeta--apuntador">
+                                    <img src="recursos/interrogacion.png" class="tarjeta__imagen">
+                                    <p class="tarjeta__descripcion tarjeta__descripcion--centrar tarjeta__descripcion--fondo">No lo sé</p>
+                                </div>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pregunta">
+                    <h3 class="pregunta__titulo">5.  ¿Qué tan probable es que se encuentre dispuest@ a instalar una app nueva en su celular?</h3>
+                    <ul class="pregunta__opciones pregunta__opciones--espaciados">
+                        <li class="pregunta__opciones__opcion">
+                            <label>
+                                <input type="radio" class="opcion__radio" name="Instalacion_app" value="Desacuerdo">
+                                <div class="tarjeta tarjeta--pequeña tarjeta--sin-fondo tarjeta--apuntador caras">
+                                    <div class="tarjeta__imagen">
+                                        <svg class="tarjeta__imagen__icono" desacuerdo xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" display="block" id="FaceSad"><circle cx="12" cy="12" r="10"/><path d="M8 9.05v-.1"/><path d="M16 9.05v-.1"/><path d="M16 16c-.5-1.5-1.79-3-4-3s-3.5 1.5-4 3"/></svg>
+                                    </div>
+                                    <p class="tarjeta__descripcion tarjeta__descripcion--centrar">Muy poco probable</p>
+                                </div>
+                            </label>
+                        </li>
+                        <li class="pregunta__opciones__opcion">
+                            <label>
+                                <input type="radio" class="opcion__radio" name="Instalacion_app" value="Medio">
+                                <div class="tarjeta tarjeta--pequeña tarjeta--sin-fondo tarjeta--apuntador caras">
+                                    <div class="tarjeta__imagen">
+                                        <svg class="tarjeta__imagen__icono" neutral xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" display="block" id="FaceNeutral"><circle cx="12" cy="12" r="10"/><path d="M8 9.05v-.1"/><path d="M16 9.05v-.1"/><path d="M8 14h8"/></svg>
+                                    </div>
+                                    <p class="tarjeta__descripcion tarjeta__descripcion--centrar">Podría darle una oportunidad</p>
+                                </div>
+                            </label>
+                        </li>
+                        <li class="pregunta__opciones__opcion">
+                            <label>
+                                <input type="radio" class="opcion__radio" name="Instalacion_app" value="Acuerdo">
+                                <div class="tarjeta tarjeta--pequeña tarjeta--sin-fondo tarjeta--apuntador caras">
+                                    <div class="tarjeta__imagen">
+                                        <svg class="tarjeta__imagen__icono" acuerdo xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" display="block" id="FaceHappy"><circle cx="12" cy="12" r="10"/><path d="M8 9.05v-.1"/><path d="M16 9.05v-.1"/><path d="M16 14c-.5 1.5-1.79 3-4 3s-3.5-1.5-4-3"/></svg>
+                                    </div>
+                                    <p class="tarjeta__descripcion tarjeta__descripcion--centrar">Muy probable</p>
+                                </div>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pregunta">
+                    <h3 class="pregunta__titulo">6.  ¿Le parece más conveniente poder utilizar una app desde el navegador en vez de instalarla en el dispositivo movil?</h3>
+                    <ul class="pregunta__opciones pregunta__opciones--filas">
+                        <li class="pregunta__opciones__opcion">
+                            <label>
+                                <input type="radio" class="opcion__radio" name="app-navegador" value="Si">
+                                <span class="opcion__radio__valor" >Sí, me parece mejor</span>
+                            </label>
+                        </li>
+                        <li class="pregunta__opciones__opcion">
+                            <label>
+                                <input type="radio" class="opcion__radio" name="app-navegador" value="Cualquiera">
+                                <span class="opcion__radio__valor" >Cualquiera de las 2 me parece bien</span>
+                            </label>
+                        </li>
+                        <li class="pregunta__opciones__opcion">
+                            <label>
+                                <input type="radio" class="opcion__radio" name="app-navegador" value="No">
+                                <span class="opcion__radio__valor" >No, prefiero</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pregunta">
+                    <h3 class="pregunta__titulo">7.  ¿Estaría dispuest@ a instalar una app más ligera desde el navegador de su dispositivo en vez de directamente en la tienda de aplicaciones ?</h3>
+                    <ul class="pregunta__opciones pregunta__opciones--espaciados">
+                        <li class="pregunta__opciones__opcion">
+                            <label>
+                                <input type="radio" class="opcion__radio" name="app-ligera" value="Desacuerdo">
+                                <div class="tarjeta tarjeta--pequeña tarjeta--sin-fondo tarjeta--apuntador caras">
+                                    <div class="tarjeta__imagen">
+                                        <svg class="tarjeta__imagen__icono" desacuerdo xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" display="block" id="FaceSad"><circle cx="12" cy="12" r="10"/><path d="M8 9.05v-.1"/><path d="M16 9.05v-.1"/><path d="M16 16c-.5-1.5-1.79-3-4-3s-3.5 1.5-4 3"/></svg>
+                                    </div>
+                                    <p class="tarjeta__descripcion tarjeta__descripcion--centrar">No</p>
+                                </div>
+                            </label>
+                        </li>
+                        <li class="pregunta__opciones__opcion">
+                            <label>
+                                <input type="radio" class="opcion__radio" name="app-ligera" value="Medio">
+                                <div class="tarjeta tarjeta--pequeña tarjeta--sin-fondo tarjeta--apuntador caras">
+                                    <div class="tarjeta__imagen">
+                                        <svg class="tarjeta__imagen__icono" neutral xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" display="block" id="FaceNeutral"><circle cx="12" cy="12" r="10"/><path d="M8 9.05v-.1"/><path d="M16 9.05v-.1"/><path d="M8 14h8"/></svg>
+                                    </div>
+                                    <p class="tarjeta__descripcion tarjeta__descripcion--centrar">Podría darle una oportunidad</p>
+                                </div>
+                            </label>
+                        </li>
+                        <li class="pregunta__opciones__opcion">
+                            <label>
+                                <input type="radio" class="opcion__radio" name="app-ligera" value="Acuerdo">
+                                <div class="tarjeta tarjeta--pequeña tarjeta--sin-fondo tarjeta--apuntador caras">
+                                    <div class="tarjeta__imagen">
+                                        <svg class="tarjeta__imagen__icono" acuerdo xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" display="block" id="FaceHappy"><circle cx="12" cy="12" r="10"/><path d="M8 9.05v-.1"/><path d="M16 9.05v-.1"/><path d="M16 14c-.5 1.5-1.79 3-4 3s-3.5-1.5-4-3"/></svg>
+                                    </div>
+                                    <p class="tarjeta__descripcion tarjeta__descripcion--centrar">Si</p>
+                                </div>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="pagina">
+
+                <div class="pregunta">
+                    <h3 class="pregunta__titulo">8.  ¿Utiliza o contrata algún recurso software o servicio web que le permita promocionar, distribuir y/o gestionar los productos/servicios ofrecidos por su negocio?</h3>
+                    <ul class="pregunta__opciones pregunta__opciones--filas">
+                        <li class="pregunta__opciones__opcion">
+                            <label>
+                                <input type="radio" class="opcion__radio" name="utilizacion_software" value="Si_gestion">
+                                <span class="opcion__radio__valor" >Si, cuento con software para la gestión de mis productos/servicios</span>
+                            </label>
+                        </li>
+                        <li class="pregunta__opciones__opcion">
+                            <label>
+                                <input type="radio" class="opcion__radio" name="utilizacion_software" value="Si_promocion">
+                                <span class="opcion__radio__valor" >No cuento con un software para la gestión pero si para la promoción de mis productos/servicios</span>
+                            </label>
+                        </li>
+                        <li class="pregunta__opciones__opcion">
+                            <label>
+                                <input type="radio" class="opcion__radio" name="utilizacion_software" value="Ninguno">
+                                <span class="opcion__radio__valor" >Ninguno, no utilizo ningún recurso software o servicio tecnológico para mi negocio</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pregunta">
+                    <h3 class="pregunta__titulo">9.  En caso de utilizar algún recurso según la pregunta #8, indique el nombre de estos(utilice comas para separarlos)</h3>
+                    <ul class="pregunta__opciones pregunta__opciones--filas ">
+                        <li class="pregunta__opciones__opcion">
+                            <div class="input input--filas">
+                                <label for="comentario" class="input__label">Nombres de los servicios/recursos</label>
+                                <textarea rows="4" cols="10" class="input__input input__input--textarea" name="nombres_servicios_recursos"></textarea>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pregunta">
+                    <h3 class="pregunta__titulo">10.  ¿Consideraría útil auxiliarse con de una plataforma software que le permita realizar la promoción, venta, recepción de pagos y administración de sus pedidos/contratos de sus productos/servicios en la economía local de su negocio ?</h3>
+                    <ul class="pregunta__opciones pregunta__opciones--espaciados">
+                        <li class="pregunta__opciones__opcion">
+                            <label>
+                                <input type="radio" class="opcion__radio" name="utilidad_app" value="Desacuerdo">
+                                <div class="tarjeta tarjeta--pequeña tarjeta--sin-fondo tarjeta--apuntador caras">
+                                    <div class="tarjeta__imagen">
+                                        <svg class="tarjeta__imagen__icono" neutral xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" display="block" id="FaceNeutral"><circle cx="12" cy="12" r="10"/><path d="M8 9.05v-.1"/><path d="M16 9.05v-.1"/><path d="M8 14h8"/></svg>
+                                    </div>
+                                    <p class="tarjeta__descripcion tarjeta__descripcion--centrar">No, no me parece útil</p>
+                                </div>
+                            </label>
+                        </li>
+                        <li class="pregunta__opciones__opcion">
+                            <label>
+                                <input type="radio" class="opcion__radio" name="utilidad_app" value="Acuerdo">
+                                <div class="tarjeta tarjeta--pequeña tarjeta--sin-fondo tarjeta--apuntador caras">
+                                    <div class="tarjeta__imagen">
+                                        <svg class="tarjeta__imagen__icono" acuerdo xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" display="block" id="FaceHappy"><circle cx="12" cy="12" r="10"/><path d="M8 9.05v-.1"/><path d="M16 9.05v-.1"/><path d="M16 14c-.5 1.5-1.79 3-4 3s-3.5-1.5-4-3"/></svg>
+                                    </div>
+                                    <p class="tarjeta__descripcion tarjeta__descripcion--centrar">Si me p arece útil</p>
+                                </div>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pregunta">
+                    <h3 class="pregunta__titulo">11.  ¿ Cuenta con una página o aplicación web para su negocio ?</h3>
+                    <ul class="pregunta__opciones pregunta__opciones--filas pregunta_opciones--centrar">
+                        <li class="pregunta__opciones__opcion">
+                            <label>
+                                <input type="radio" class="opcion__radio" name="pagina_web" value="Desacuerdo">
+                                <div class="tarjeta tarjeta--pequeña tarjeta--sin-fondo tarjeta--apuntador caras" style="margin: auto;" >
+                                    <div class="tarjeta__imagen">
+                                        <svg class="tarjeta__imagen__icono" neutral xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" display="block" id="FaceNeutral"><circle cx="12" cy="12" r="10"/><path d="M8 9.05v-.1"/><path d="M16 9.05v-.1"/><path d="M8 14h8"/></svg>
+                                    </div>
+                                    <p class="tarjeta__descripcion tarjeta__descripcion--centrar">No</p>
+                                </div>
+                            </label>
+                        </li>
+                        <li class="pregunta__opciones__opcion">
+                            <label>
+                                <input type="radio" class="opcion__radio" name="pagina_web" value="Acuerdo">
+                                <div class="tarjeta tarjeta--pequeña tarjeta--sin-fondo tarjeta--apuntador caras" style="margin: auto;" >
+                                    <div class="tarjeta__imagen">
+                                        <svg class="tarjeta__imagen__icono" acuerdo xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" display="block" id="FaceHappy"><circle cx="12" cy="12" r="10"/><path d="M8 9.05v-.1"/><path d="M16 9.05v-.1"/><path d="M16 14c-.5 1.5-1.79 3-4 3s-3.5-1.5-4-3"/></svg>
+                                    </div>
+                                    <p class="tarjeta__descripcion tarjeta__descripcion--centrar">Si</p>
+                                </div>
+                            </label>
+                        </li>
+                        <li class="pregunta__opciones__opcion">
+                            <div class="input input--filas">
+                                <label for="direccion_web" class="input__label">Dirección web(opcional)</label>
+                                <input class="input__input" type="text" name="direccion_web" id="">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="pagina">
+                
+                <div class="pregunta pregunta--ancho-columnas">
+                    <h3 class="pregunta__titulo">12.  ¿ Le interesaría poder ofrecer beneficios especiales a sus compradores frecuentes mediante promociones y servicios exclusivos para ellos a través de la plataforma ?</h3>
+                    <ul class="pregunta__opciones pregunta__opciones--espaciados">
+                        <li class="pregunta__opciones__opcion">
+                            <label>
+                                <input type="radio" class="opcion__radio" name="beneficios_especiales" value="Desacuerdo">
+                                <div class="tarjeta tarjeta--pequeña tarjeta--pequeña--alargada tarjeta--sin-fondo tarjeta--apuntador caras">
+                                    <div class="tarjeta__imagen">
+                                        <svg class="tarjeta__imagen__icono" neutral xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" display="block" id="FaceNeutral"><circle cx="12" cy="12" r="10"/><path d="M8 9.05v-.1"/><path d="M16 9.05v-.1"/><path d="M8 14h8"/></svg>
+                                    </div>
+                                    <p class="tarjeta__descripcion tarjeta__descripcion--centrar">No me interesa</p>
+                                </div>
+                            </label>
+                        </li>
+                        <li class="pregunta__opciones__opcion">
+                            <label>
+                                <input type="radio" class="opcion__radio" name="beneficios_especiales" value="Acuerdo">
+                                <div class="tarjeta tarjeta--pequeña tarjeta--sin-fondo tarjeta--apuntador tarjeta--alargada caras">
+                                    <div class="tarjeta__imagen">
+                                        <svg class="tarjeta__imagen__icono" acuerdo xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" display="block" id="FaceHappy"><circle cx="12" cy="12" r="10"/><path d="M8 9.05v-.1"/><path d="M16 9.05v-.1"/><path d="M16 14c-.5 1.5-1.79 3-4 3s-3.5-1.5-4-3"/></svg>
+                                    </div>
+                                    <p class="tarjeta__descripcion tarjeta__descripcion--centrar">Si me interesaría poder ofrecer beneficios a mis compradores</p>
+                                </div>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pregunta pregunta--ancho-columnas">
+                    <h3 class="pregunta__titulo">13.   ¿Qué comisión en la venta considera justa por la venta de sus servicios/producto en la plataforma?</h3>
+                    <ul class="pregunta__opciones pregunta__opciones--filas">
+                        <li class="pregunta__opciones__opcion">
+                            <label>
+                                <input type="radio" class="opcion__radio" name="comision" value="Si">
+                                <span class="opcion__radio__valor" >Comisión del 18%</span>
+                            </label>
+                        </li>
+                        <li class="pregunta__opciones__opcion">
+                            <label>
+                                <input type="radio" class="opcion__radio" name="comision" value="Cualquiera">
+                                <span class="opcion__radio__valor" >Comisión del 20%</span>
+                            </label>
+                        </li>
+                        <li class="pregunta__opciones__opcion">
+                            <label>
+                                <input type="radio" class="opcion__radio" name="comision" value="No">
+                                <span class="opcion__radio__valor" >Comisión del 22%</span>
+                            </label>
+                        </li>
+                        <li class="pregunta__opciones__opcion">
+                            <label>
+                                <input type="radio" class="opcion__radio" name="comision" value="No">
+                                <span class="opcion__radio__valor" >Comisión del 25%</span>
+                            </label>
+                        </li>
+                        <li class="pregunta__opciones__opcion">
+                            <label>
+                                <input type="radio" class="opcion__radio" name="comision" value="No">
+                                <span class="opcion__radio__valor" >Comisión del 28%</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+            
+            <div class="pagina">
+
+                <div class="pregunta">
+                    <h3 class="pregunta__titulo">14.  Elija el rango de precios que estaría dispuesto a pagar mensualmente por una cuenta para su negocio que le permita mostrar sus productos/servicios en la plataforma , administrar sus pedidos/contrataciones, recibir los pagos libres de comisión en la venta de sus clientes desde la plataforma a una cuenta bancaria o Paypal de su propiedad y muchos otros beneficios que le puede brindar a sus compradores</h3>
+                    <ul class="pregunta__opciones pregunta__opciones--filas pregunta__opciones--espaciados">
+                        <li class="pregunta__opciones__opcion">
+                            <input id="range_precios" type="range" name="rango_precios" min="0" max="4">
+                        </li>
+                        <li class="pregunta__opciones__opcion">
+                            <span class="opcion__valor-range" id="valor_precios">$250 - $350</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="pagina">
+
+                <div class="pregunta">
+                    <h3 class="pregunta__titulo">15.  El siguiente logotipo formará parte de imagen de la plataforma e ícono de la aplicación ¿Le gusta el diseño?</h3>
+                    <ul class="pregunta__opciones--logotipo">
+                        <li class="pregunta__opciones__opcion">
+                            <img src="recursos/econocal-logo.jpeg" alt="" class="logotipo">
+                        </li>
+                        <li class="pregunta__opciones__opcion">
+                            <label>
+                                <input type="radio" class="opcion__radio" name="logotipo" value="Medio">
+                                <div class="tarjeta tarjeta--pequeña tarjeta--sin-fondo tarjeta--apuntador caras">
+                                    <div class="tarjeta__imagen">
+                                        <svg class="tarjeta__imagen__icono" neutral xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" display="block" id="FaceNeutral"><circle cx="12" cy="12" r="10"/><path d="M8 9.05v-.1"/><path d="M16 9.05v-.1"/><path d="M8 14h8"/></svg>
+                                    </div>
+                                    <p class="tarjeta__descripcion tarjeta__descripcion--centrar">No me agrada el diseño</p>
+                                </div>
+                            </label>
+                        </li>
+                        <li class="pregunta__opciones__opcion">
+                            <label>
+                                <input type="radio" class="opcion__radio" name="logotipo" value="Acuerdo">
+                                <div class="tarjeta tarjeta--pequeña tarjeta--sin-fondo tarjeta--apuntador caras">
+                                    <div class="tarjeta__imagen">
+                                        <svg class="tarjeta__imagen__icono" acuerdo xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" display="block" id="FaceHappy"><circle cx="12" cy="12" r="10"/><path d="M8 9.05v-.1"/><path d="M16 9.05v-.1"/><path d="M16 14c-.5 1.5-1.79 3-4 3s-3.5-1.5-4-3"/></svg>
+                                    </div>
+                                    <p class="tarjeta__descripcion tarjeta__descripcion--centrar">Si, me gusta</p>
+                                </div>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pregunta">
+                    <h3 class="pregunta__titulo">16.  Indique en 3 palabras con que relaciona el logotipo</h3>
+                    <ul class="pregunta__opciones pregunta__opciones--filas">
+                        <li class="pregunta__opciones__opcion">
+                            <div class="input">
+                                <label for="Palabra_1" class="input__label input__label--bold">1.</label>
+                                <input class="input__input" type="text" name="Palabra_1" id="">
+                            </div>
+                        </li>
+                        <li class="pregunta__opciones__opcion">
+                            <div class="input">
+                                <label for="Palabra_2" class="input__label input__label--bold">2.</label>
+                                <input class="input__input" type="text" name="Palabra_2" id="">
+                            </div>
+                        </li>
+                        <li class="pregunta__opciones__opcion">
+                            <div class="input">
+                                <label for="Palabra_3" class="input__label input__label--bold">3.</label>
+                                <input class="input__input" type="text" name="Palabra_3" id="">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pregunta">
+                    <h3 class="pregunta__titulo">17.  ¿Le agradaría utilizar la plataforma que proponemos con la elección de colores y el estilo utilizado en este formulario?</h3>
+                    <ul class="pregunta__opciones pregunta__opciones--espaciados">
+                        <li class="pregunta__opciones__opcion">
+                            <label>
+                                <input type="radio" class="opcion__radio" name="Instalacion_app" value="Desacuerdo">
+                                <div class="tarjeta tarjeta--pequeña tarjeta--sin-fondo tarjeta--apuntador caras">
+                                    <div class="tarjeta__imagen">
+                                        <svg class="tarjeta__imagen__icono" desacuerdo xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" display="block" id="FaceSad"><circle cx="12" cy="12" r="10"/><path d="M8 9.05v-.1"/><path d="M16 9.05v-.1"/><path d="M16 16c-.5-1.5-1.79-3-4-3s-3.5 1.5-4 3"/></svg>
+                                    </div>
+                                    <p class="tarjeta__descripcion tarjeta__descripcion--centrar">Muy poco probable</p>
+                                </div>
+                            </label>
+                        </li>
+                        <li class="pregunta__opciones__opcion">
+                            <label>
+                                <input type="radio" class="opcion__radio" name="Instalacion_app" value="Medio">
+                                <div class="tarjeta tarjeta--pequeña tarjeta--sin-fondo tarjeta--apuntador caras">
+                                    <div class="tarjeta__imagen">
+                                        <svg class="tarjeta__imagen__icono" neutral xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" display="block" id="FaceNeutral"><circle cx="12" cy="12" r="10"/><path d="M8 9.05v-.1"/><path d="M16 9.05v-.1"/><path d="M8 14h8"/></svg>
+                                    </div>
+                                    <p class="tarjeta__descripcion tarjeta__descripcion--centrar">Podría darle una oportunidad</p>
+                                </div>
+                            </label>
+                        </li>
+                        <li class="pregunta__opciones__opcion">
+                            <label>
+                                <input type="radio" class="opcion__radio" name="Instalacion_app" value="Acuerdo">
+                                <div class="tarjeta tarjeta--pequeña tarjeta--sin-fondo tarjeta--apuntador caras">
+                                    <div class="tarjeta__imagen">
+                                        <svg class="tarjeta__imagen__icono" acuerdo xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" display="block" id="FaceHappy"><circle cx="12" cy="12" r="10"/><path d="M8 9.05v-.1"/><path d="M16 9.05v-.1"/><path d="M16 14c-.5 1.5-1.79 3-4 3s-3.5-1.5-4-3"/></svg>
+                                    </div>
+                                    <p class="tarjeta__descripcion tarjeta__descripcion--centrar">Muy probable</p>
+                                </div>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pregunta">
+                    <h3 class="pregunta__titulo">18 .  Si tiene algún comentario respecto a la plataforma propuesta, las características y funciones, los colores y/o el diseño del formulario, puede escribirlos en esta sección(opcionales)</h3>
+                    <ul class="pregunta__opciones pregunta__opciones--filas ">
+                        <li class="pregunta__opciones__opcion">
+                            <div class="input input--filas">
+                                <label for="comentario" class="input__label">Comentarios y Sugerencias</label>
+                                <textarea rows="4" cols="10" class="input__input input__input--textarea" name="comentario"></textarea>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="botones-paginas">
+
+            <button id="regresar" class="botones-paginas__retroceder boton boton--aurora-gris"> Regresar </button>
+            <button id="siguiente" class="botones-paginas__avanzar boton boton--aurora-morado"> Siguiente </button>
+            <!-- <button id="enviar" class="botones-paginas__avanzar boton boton--aurora-morado"> Enviar Respestas </button> -->
+            <a href="agradecimientos.html" id="enviar" class="botones-paginas__avanzar boton boton--aurora-morado"> Enviar Respestas </a>
+
+
+        </div>
+        
+    </div>
+
+    <script src="scripts/paginas.js"></script>
+    <script src="scripts/range_precios.js"></script>
+
+</body>
+</html>
